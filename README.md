@@ -1,19 +1,25 @@
+# Developing an AI application
+
+AI algorithms will be used in an increasing number of commonplace applications. For instance, you might want to incorporate an image classifier into a mobile application. As part of the overall application architecture, you would use a deep learning model that had been trained on hundreds of thousands of images to accomplish this. The use of these kinds of models as standard components of applications will make up a sizable portion of software development in the future.
+
 
 # IR model in OpenVINO
 
 <a href="https://colab.research.google.com/drive/1VHRkn42CN_hJd9eY4B2UPvGeOzBJ4-99#scrollTo=UzFYM3i4XfUH" target="_blank">Colab Link</a>
 
 
-# Option used :
+# Different Option used :
 
-TensorFlowLite Inference
+TensorFlowLite Inference--<a href="https://colab.research.google.com/drive/1-eVXttddEBeWV0DnJw-XtdOXcA5Lg3BT?usp=share_link" target="_blank">Colab Link</a>
+
+Working with REST API using TensorFlow--<a href="https://colab.research.google.com/drive/11jRV6DGo3EPlcMM3766Jg5G_gksTESi7?usp=share_link" target="_blank">Colab Link</a>
 
 
-Working with REST API using TensorFlow
+**Neural network** with tf.keras.layers.Dropout--
+<a href="https://colab.research.google.com/drive/1Sapgm791W9aaHrYEk8gjXAwjHmdBfN0r?usp=share_link" target="_blank">Colab Link</a>
 
-Neural network with tf.keras.layers.Dropout
-
-Autotuning
+Autotuning--
+<a href="https://colab.research.google.com/drive/1Sapgm791W9aaHrYEk8gjXAwjHmdBfN0r?usp=share_link" target="_blank">Colab Link</a>
 
 # Training and Performance Chart for Fashion Dataset
 <img width="806" alt="Screen Shot 2022-11-21 at 6 43 23 PM" src="https://user-images.githubusercontent.com/99928364/203208187-78ad8f26-e512-4a4d-8490-4949e2619a80.png">
@@ -44,6 +50,9 @@ Colab link
 
 Loading image from JSON (Fashion dataset MNIST)
 
+1. Created a new model parameter with the name create simplemodelTest
+2. In CNNSimpleModels.py and trained the classification model using myTFDistributedTrainer.py. This would create an output folder inside output/fashion/1. This model is combined with our API for predictions
+
 <img width="271" alt="Screen Shot 2022-11-21 at 8 58 49 PM" src="https://user-images.githubusercontent.com/99928364/203225514-78a2904f-21d6-4713-8a2f-1b5304943172.png">
 
 
@@ -52,13 +61,39 @@ Prediction of image from JSON (Fashion dataset MNIST)
 <img width="782" alt="Screen Shot 2022-11-21 at 8 59 17 PM" src="https://user-images.githubusercontent.com/99928364/203225586-c573277d-a3f0-46c8-bcc6-be09391ad445.png">
 
 
+# RT Inference changes
+
+Trained with the MNIST model for fashion.
+
+To train the model using the MNIST data, a new model was created (inside CNNsimplemodels.py) and trained.
+
+The class name and other parameters for the MNIST Model were changed as appropriate, and ImageOps was used to transform the RGB to grey scale to create the image array shape (28,28,1). 
+
+The resulting inference model is tested using a sneaker image, and the prediction performed well with greater accuracy.
+
+The output model has been saved in the output/fashion folder and will subsequently be used for lite model conversion and prediction use.
+
+# Changes to TF lite
+
+For embedded and mobile devices where the model needs to be smaller and more precise, lightweight models are used.
+
+This time, the converted model predicted the sneakers as sandals, which is close to the actual prediction.
+
+Export TF lite would take the model saved from the previous step and convert it to a lite model, which is then used to make inferences.
+
+
 # Plotting  9 images from fashion training dataset
+
+**COLAB LINK**
+<a href="https://colab.research.google.com/drive/11jRV6DGo3EPlcMM3766Jg5G_gksTESi7?usp=share_link" target="_blank">Colab Link</a>
+
 
 <img width="782" alt="Screen Shot 2022-11-21 at 9 03 15 PM" src="https://user-images.githubusercontent.com/99928364/203226121-5ec59ec6-fcfe-45b6-9eb1-d481c04037f0.png">
 
 
 # Plotting  9 images from flowers training dataset
 
+**COLAB LINK**
 <a href="https://colab.research.google.com/drive/1Sapgm791W9aaHrYEk8gjXAwjHmdBfN0r?usp=share_link" target="_blank">Colab Link</a>
 
 
