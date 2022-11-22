@@ -15,7 +15,7 @@ parser.add_argument('--data_name', type=str, default='flower',
                     help='data name: mnist, fashionMNIST, flower')
 parser.add_argument('--data_type', default='imagefolder', choices=['tfds', 'kerasdataset', 'imagefolder', 'TFrecord'],
                     help='the type of data')  # gs://cmpelkk_imagetest/*.tfrec
-parser.add_argument('--data_path', type=str, default='/home/lkk/.keras/datasets/flower_photos',
+parser.add_argument('--data_path', type=str, default='D:/pyenv/.keras/datasets/flower_photos',
                     help='path to get data')
 parser.add_argument('--img_height', type=int, default=180,
                     help='resize to img height')
