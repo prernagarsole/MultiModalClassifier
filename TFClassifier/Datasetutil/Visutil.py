@@ -26,7 +26,7 @@ def plot25images(images, labels, class_names):
         plt.xlabel(class_names[labels[i]])
     plt.show()
     checkfolder('./outputs')
-    fig.savefig('./outputs/25images.png')
+   fig.savefig('D:/pyenv/MultiModalClassifier_bonuswork/outputs/25images.png')
 
 def plot9imagesfromtfdataset(image_ds, class_names):
     fig = plt.figure(figsize=(10,10))
@@ -43,10 +43,9 @@ def plot9imagesfromtfdataset(image_ds, class_names):
             plt.title(class_names[labels[i]])
             plt.axis("off")
     checkfolder('./outputs')
-    fig.savefig('./outputs/9images.png')
+   fig.savefig('D:/pyenv/MultiModalClassifier_bonuswork/outputs/9images.png')
 
-
-def plot_history(history, metric, val_metric, path='./outputs/traininghistory.pdf'):
+def plot_history(history, metric, val_metric, path='D:/pyenv/MultiModalClassifier_bonuswork/outputs/traininghistory.pdf'):
     acc = history.history[metric]
     val_acc = history.history[val_metric]
 
