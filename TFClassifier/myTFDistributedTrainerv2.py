@@ -8,7 +8,7 @@ import time
 import os
 print(tf.__version__)
 
-from TFClassifier.Datasetutil.TFdatasetutil import loadTFdataset #loadtfds, loadkerasdataset, loadimagefolderdataset
+from TFClassifier.Datasetutil.TFdatasetutil import loadTFdataset,loadimagefolderdataset,loadkerasdataset 
 from TFClassifier.myTFmodels.CNNsimplemodels import createCNNsimplemodel
 from TFClassifier.Datasetutil.Visutil import plot25images, plot9imagesfromtfdataset, plot_history
 from TFClassifier.myTFmodels.optimizer_factory import build_learning_rate, setupTensorboardWriterforLR
@@ -17,12 +17,13 @@ model = None
 # import logger
 
 parser = configargparse.ArgParser(description='myTFDistributedClassify')
-parser.add_argument('--data_name', type=str, default='flower',
+
+parser.add_argument('--data_name', type=str, default='fashionMNIST',
                     help='data name: mnist, fashionMNIST, flower')
-parser.add_argument('--data_type', default='imagefolder', choices=['tfds', 'kerasdataset', 'imagefolder', 'customtfrecordfile'],
+parser.add_argument('--data_type', default='kerasdataset', choices=['tfds', 'kerasdataset', 'imagefolder', 'customtfrecordfile'],
                     help='the type of data')  # gs://cmpelkk_imagetest/*.tfrec
-parser.add_argument('--data_path', type=str, default='~/.keras/datasets/flower_photos/',
-                    help='path to get data') #'/home/lkk/.keras/datasets/flower_photos'
+parser.add_argument('--data_path', type=str, default='D:/pyenv/MultiModalClassifier_bonuswork/ImageClassificationData',
+            help='path to get data') #'/home/lkk/.keras/datasets/flower_photos'
 parser.add_argument('--img_height', type=int, default=180,
                     help='resize to img height, default 180')
 parser.add_argument('--img_width', type=int, default=180,
@@ -170,5 +171,7 @@ def main():
     eval_loss, eval_acc = model.evaluate(val_ds)
     print('Eval loss: {}, Eval Accuracy: {}'.format(eval_loss, eval_acc))
 
+    print("Output path:", args.save_path)
+    print("Output path:", args.data_name)
 if __name__ == '__main__':
     main()
