@@ -124,6 +124,15 @@ Export TF lite would take the model saved from the previous step and convert it 
 
 8. A Google Colab notebook was made to serve the REST API, show predictions from a json file, and display the results.
 
+
+# Compare the inference performance improvement (e.g., speed improvement over the original TF/Pytorch inference) of your selected feature.
+
+Tensorflow's flow model provided predictions at a rate of no more than 10 frames per second. The trained model was then transferred to the onnx format and then to the openvino runtime. From the aforementioned findings, I was roughly given 130 frames per second with good prediction.
+
+A collection of C++ libraries with C and Python bindings called OpenVINO Runtime offers a standard API for delivering inference solutions on the platform of your choosing. To read an Intermediate Representation (IR), ONNX, or PaddlePaddle model and run it on your chosen devices, use the OpenVINO Runtime API.
+
+Plugin architecture is used by OpenVINO Runtime. Its plugins are software parts that include a full implementation for inference on a specific Intel® hardware component, such as a CPU, GPU, or VPU. Each plugin implements the unified API and offers extra hardware-specific APIs for setting up devices or API compatibility between the underlying plugin backend and OpenVINO Runtime.
+
 # MultiModalClassifier
 
 This is a project repo for multi-modal deep learning classifier with popular models from Tensorflow and Pytorch. The goal of these baseline models is to provide a template to build on and can be a starting point for any new ideas, applications. If you want to learn basics of ML and DL, please refer this repo: https://github.com/lkk688/DeepDataMiningLearning.
