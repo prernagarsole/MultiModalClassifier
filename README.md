@@ -2,23 +2,21 @@
 
 AI algorithms will be used in an increasing number of commonplace applications. For instance, you might want to incorporate an image classifier into a mobile application. As part of the overall application architecture, you would use a deep learning model that had been trained on hundreds of thousands of images to accomplish this. The use of these kinds of models as standard components of applications will make up a sizable portion of software development in the future.
 
+# Options used :
+
+# TensorFlowLite Inference
+<a href="https://colab.research.google.com/drive/1-eVXttddEBeWV0DnJw-XtdOXcA5Lg3BT?usp=share_link" target="_blank">Colab Link</a>
+
+# Working with REST API using TensorFlow
+<a href="https://colab.research.google.com/drive/11jRV6DGo3EPlcMM3766Jg5G_gksTESi7?usp=share_link" target="_blank">Colab Link</a>
 
 # IR model in OpenVINO
-
 <a href="https://colab.research.google.com/drive/1VHRkn42CN_hJd9eY4B2UPvGeOzBJ4-99#scrollTo=UzFYM3i4XfUH" target="_blank">Colab Link</a>
 
-
-# Different Option used :
-
-TensorFlowLite Inference--<a href="https://colab.research.google.com/drive/1-eVXttddEBeWV0DnJw-XtdOXcA5Lg3BT?usp=share_link" target="_blank">Colab Link</a>
-
-Working with REST API using TensorFlow--<a href="https://colab.research.google.com/drive/11jRV6DGo3EPlcMM3766Jg5G_gksTESi7?usp=share_link" target="_blank">Colab Link</a>
-
-
-**Neural network** with tf.keras.layers.Dropout--
+# Neural network with tf.keras.layers.Dropout--
 <a href="https://colab.research.google.com/drive/1Sapgm791W9aaHrYEk8gjXAwjHmdBfN0r?usp=share_link" target="_blank">Colab Link</a>
 
-Autotuning--
+# Autotuning--
 <a href="https://colab.research.google.com/drive/1Sapgm791W9aaHrYEk8gjXAwjHmdBfN0r?usp=share_link" target="_blank">Colab Link</a>
 
 # Training and Performance Chart for Fashion Dataset
@@ -82,6 +80,9 @@ This time, the converted model predicted the sneakers as sandals, which is close
 Export TF lite would take the model saved from the previous step and convert it to a lite model, which is then used to make inferences.
 
 
+
+# Worked on Datasets
+
 # Plotting  9 images from fashion training dataset
 
 **COLAB LINK**
@@ -98,6 +99,11 @@ Export TF lite would take the model saved from the previous step and convert it 
 
 
 <img width="614" alt="Screen Shot 2022-11-21 at 9 14 19 PM" src="https://user-images.githubusercontent.com/99928364/203227474-db05c40d-8a19-4f70-ad20-90b3dd7f8096.png">
+
+
+# Changes made to git repo
+
+<a href="https://github.com/prernagarsole/MultiModalClassifier/commit/7306d44e5d5c74044488dc973b33c0f0ebaade08" target="_blank">Code changes Link</a>
 
 
 # Steps to run
